@@ -1,16 +1,16 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 
 const Stock: React.FC<{item: any}> = ({item}) => {
 
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
     return (
         <TouchableOpacity
             style={styles.itemContainer}
-            // onPress={() => navigation.navigate('StockDetail', { stock: item })}
+            onPress={() => navigation.navigate('StockDetail', { stock: item })}
             >
             <Text style={styles.name}>{item.title}</Text>
             <Text style={styles.price}>${item.price}</Text>
